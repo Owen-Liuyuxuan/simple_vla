@@ -34,11 +34,11 @@ cp -r simple_vla/qwenvl3/transformers_replace/models <path-to-site-packages>/tra
 ## Data preparation
 
 1. **K-means anchors** (used by the unified decoder `InstanceBank` configs): paths in `configs/simple_inference_stage2_2b.py` expect files such as:
-   - `nuScenes/data/kmeans/kmeans_det_900.npy`
-   - `nuScenes/data/kmeans/kmeans_map_100.npy`  
+   - `kmeans/kmeans_det_900.npy`
+   - `kmeans/kmeans_map_100.npy`  
    These (and any other assets referenced by the config) should live under your working tree or be symlinked so those paths resolve.
 
-2. **Synthetic / sample tensors** for the bundled loader: `SyntheticDrivingDataset` loads several `.npz` files via `pyhelp` (e.g. `nuScenes/img0.npz`, `timestamp.npz`, `projection_mat.npz`, …) relative to the **current working directory**. A full curated pack will be **uploaded and documented later**; until then, place compatible files at the paths used in `datasets/synthetic_dataset.py` or adjust paths locally.
+2. **Synthetic / sample tensors** for the bundled loader: `SyntheticDrivingDataset` loads several `.npz` files via `pyhelp` (e.g. `sample_data/img0.npz`, `sample_data/timestamp.npz`, `sample_data/projection_mat.npz`, …) relative to the **current working directory**. A full curated pack will be **uploaded and documented later**; until then, place compatible files at the paths used in `datasets/synthetic_dataset.py` or adjust paths locally.
 
 ## Pretrained weights
 

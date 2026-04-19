@@ -43,7 +43,7 @@ unified_decoder_cfg = dict(
         type="InstanceBank",
         num_anchor=900,
         embed_dims=embed_dims,
-        anchor="nuScenes/data/kmeans/kmeans_det_900.npy",
+        anchor="kmeans/kmeans_det_900.npy",
         anchor_handler=dict(type="SparseBox3DKeyPointsGenerator"),
         num_temp_instances=600,
         confidence_decay=0.6,
@@ -53,7 +53,7 @@ unified_decoder_cfg = dict(
         type="InstanceBank",
         num_anchor=100,
         embed_dims=embed_dims,
-        anchor="nuScenes/data/kmeans/kmeans_map_100.npy",
+        anchor="kmeans/kmeans_map_100.npy",
         anchor_handler=dict(type="SparsePoint3DKeyPointsGenerator"),
         num_temp_instances=0,
         confidence_decay=0.6,
@@ -218,7 +218,7 @@ unified_decoder_cfg = dict(
     motion_decoder=dict(type="SparseMotionDecoder"),
     det_reg_weights=[2.0] * 3 + [1.0] * 7,
     map_reg_weights=[1.0] * 40,
-    motion_anchor="nuScenes/data/kmeans/kmeans_motion_6.npy",
+    motion_anchor="kmeans/kmeans_motion_6.npy",
 )
 
 lora_cfg = dict(

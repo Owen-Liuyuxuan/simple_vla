@@ -46,15 +46,15 @@ class SyntheticDrivingDataset:
         C = self.num_cameras
 
         # (B, T, 6, 3, H, W)  — last timestamp
-        img = load_data("nuScenes/img0.npz")
+        img = load_data("sample_data/img0.npz")
         # timestamp (B, )
-        timestamp = load_data("nuScenes/timestamp.npz")
+        timestamp = load_data("sample_data/timestamp.npz")
         # camera-to-ego projection (B, 6, 4, 4)
-        projection_mat = load_data("nuScenes/projection_mat.npz")
+        projection_mat = load_data("sample_data/projection_mat.npz")
         # image sizes (B, 6, 2)
         image_wh = torch.tensor([[[W, H]]], dtype=torch.float32).expand(B, C, -1)
         # ego status: (B, 10) — [ax, ay, az, wx, wy, wz, vx, vy, vz, steer]
-        ego_status = load_data("nuScenes/ego_status.npz")
+        ego_status = load_data("sample_data/ego_status.npz")
         # navigation command: (B, 3) — one-hot over
         #   [Turn Right, Turn Left, Go Straight]
         # Matches nuScenes data converter (see tools/data_converter/nuscenes_converter.py),
@@ -64,7 +64,7 @@ class SyntheticDrivingDataset:
         cmd_idx = torch.ones(B, dtype=torch.int64)
         gt_ego_fut_cmd = torch.nn.functional.one_hot(cmd_idx, num_classes=3).float()
         # history trajectory: (B, T, 2) in meters
-        hist_traj = load_data("nuScenes/hist_traj.npz") #torch.randn(B, 4, 2) * 0.1
+        hist_traj = load_data("sample_data/hist_traj.npz") #torch.randn(B, 4, 2) * 0.1
 
         # One img_meta dict per batch row; each T_* is (4, 4) — matches nuScenes / InstanceBank.
         img_metas = []
@@ -72,8 +72,8 @@ class SyntheticDrivingDataset:
             #T_global = np.eye(4, dtype=np.float64)
             #T_global[0, 3] = float(hist_traj[b, 0, 0])
             #T_global[1, 3] = float(hist_traj[b, 0, 1])
-            T_global = load_data("nuScenes/T_global.npz")
-            T_global_inv = load_data("nuScenes/T_global_inv.npz")
+            T_global = load_data("sample_data/T_global.npz")
+            T_global_inv = load_data("sample_data/T_global_inv.npz")
             img_metas.append(
                 {
                     "sample_idx": idx,

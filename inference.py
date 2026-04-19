@@ -44,7 +44,7 @@ CONFIG = os.environ.get(
 )
 CKPT = os.environ.get(
     "CHECKPOINT",
-    str(Path(__file__).parent.parent / "UniDriveVLA_Stage3_Nuscenes_2B.pt")
+    str(Path(__file__).parent / "UniDriveVLA_Stage3_Nuscenes_2B.pt")
 )
 
 print("=" * 60)
