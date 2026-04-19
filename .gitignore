@@ -1,0 +1,16 @@
+*.pth
+*.pt
+*.pyc
+vis
+*.png
+*.mp4
+.vscode
+
+nuScenes/data
+nuScenes/output
+nuScenes/work_dirs
+nuScenes/output*
+
+ops/build
+*.so
+*.egg-info

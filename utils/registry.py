@@ -1,0 +1,25 @@
+"""Compatibility re-export — use :mod:`simple_vla.core.registry` as the single source of truth."""
+
+from simple_vla.core.registry import (  # noqa: F401
+    Registry,
+    build_from_cfg,
+    build,
+    ATTENTION,
+    PLUGIN_LAYERS,
+    POSITIONAL_ENCODING,
+    FEEDFORWARD_NETWORK,
+    NORM_LAYERS,
+    HEADS,
+    LOSSES,
+    BBOX_SAMPLERS,
+    BBOX_CODERS,
+    BBOX_ASSIGNERS,
+    DETECTORS,
+    BACKBONES,
+    NECKS,
+    build_head,
+    build_backbone,
+    build_neck,
+    build_loss,
+    build_assigner,
+)

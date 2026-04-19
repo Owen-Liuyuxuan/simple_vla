@@ -1,0 +1,20 @@
+# -----------------------------------------------------------------------------
+# Core — model, training-style deps, and simple_vla inference stack
+# (see inference.py, plugin/unidrivevla/, core/, ops/)
+# -----------------------------------------------------------------------------
+transformers==4.57.1
+
+einops
+flash-attn
+matplotlib
+numpy
+opencv-python
+packaging
+pillow
+safetensors
+scipy
+timm
+torch
+tqdm
+setuptools
+
