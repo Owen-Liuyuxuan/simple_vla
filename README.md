@@ -11,7 +11,7 @@ A minimal **inference-only** slice of [UniDriveVLA](https://github.com/xiaomi-re
 
 | Component | Notes |
 |-----------|--------|
-| **PyTorch** | GPU build recommended (`cuda`); CPU may run but is untested for this stack. |
+| **PyTorch** | GPU build recommended (`cuda`); Tested on `pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121`|
 | **transformers** | Pin: `transformers==4.57.1`, then apply the **Qwen3-VL patch** shipped under `simple_vla/qwenvl3/transformers_replace/` (see [Transformers patch](#transformers-patch)). |
 | **pyhelp** | [Owen-Liuyuxuan/pyhelp](https://github.com/Owen-Liuyuxuan/pyhelp) — used for `load_data` when loading packaged sample tensors (see `datasets/synthetic_dataset.py`). Install from the repo (e.g. `pip install -e .` from a clone, or follow that project’s `install.sh`). |
 | **Other Python deps** | See `requirements.txt` (`einops`, `flash-attn`, `matplotlib`, `numpy`, `opencv-python`, `pillow`, `safetensors`, `scipy`, `timm`, `tqdm`, etc.). |
@@ -32,6 +32,8 @@ cp -r simple_vla/qwenvl3/transformers_replace/models <path-to-site-packages>/tra
 `simple_vla/patch.sh` is a **template** with a machine-specific path — edit it or use the command above.
 
 ## Data preparation
+
+Download from https://drive.google.com/drive/folders/1bqF_iZtNAjinooTgHqimM0h5gV9lDx2j?usp=drive_link
 
 1. **K-means anchors** (used by the unified decoder `InstanceBank` configs): paths in `configs/simple_inference_stage2_2b.py` expect files such as:
    - `kmeans/kmeans_det_900.npy`
