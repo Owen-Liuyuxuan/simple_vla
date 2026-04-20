@@ -1,4 +1,4 @@
-"""Register all classes — delegates to :func:`simple_vla.plugin.bootstrap.ensure_plugins_registered`."""
+"""Register all classes — delegates to :func:`plugin.bootstrap.ensure_plugins_registered`."""
 
 from plugin.bootstrap import ensure_plugins_registered
 from utils.registry import (

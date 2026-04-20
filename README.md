@@ -53,26 +53,19 @@ Point `CHECKPOINT` (see below) at the downloaded file. The planning head also ne
 
 ## Running inference
 
-**Main entry**: `simple_vla/inference.py` (run from the **repository root** so imports and default paths work).
+**Main entry**: `inference.py` (run from the **repository root** so imports and default paths work).
 
 ```bash
-cd /path/to/unidrivevla   # parent of simple_vla/
-python simple_vla/inference.py
+cd /path/to/simple_vla
+python inference.py
 ```
 
 ### Environment variables
 
 | Variable | Role | Default |
 |----------|------|---------|
-| `CONFIG` | Python config file for the model | `simple_vla/configs/simple_inference_stage2_2b.py` |
-| `CHECKPOINT` | Path to `*.pt` checkpoint | `../UniDriveVLA_Stage3_Nuscenes_2B.pt` (relative to CWD: repo root) |
-| `VLM_PRETRAINED_PATH` | HF repo id or local path for VLM weights | Value in config / env |
-| `OCCWORLD_VAE_PATH` | OccWorld VAE checkpoint if enabled in config | From config |
-| `DEVICE` | `cuda` or `cpu` | `cuda` if available |
-| `NUM_SAMPLES` | Number of forward passes | `4` |
-| `IMG_HEIGHT`, `IMG_WIDTH` | Input image size | `544`, `960` |
-
-`BATCH_SIZE` is ignored; this script runs with batch size 1.
+| `CONFIG` | Python config file for the model | `configs/simple_inference_stage2_2b.py` |
+| `CHECKPOINT` | Path to `*.pt` checkpoint | `./UniDriveVLA_Stage3_Nuscenes_2B.pt` (relative to CWD: repo root) |
 
 Outputs (e.g. visualizations) go under `output/` by default (see `tools/simple_vis.py`).
 

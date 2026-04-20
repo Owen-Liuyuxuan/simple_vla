@@ -2,7 +2,7 @@
 
 This is a copy+import-rewrite of
 `nuScenes/projects/mmdet3d_plugin/models/attention.py`.
-All mmcv/mmdet dependencies are replaced with simple_vla.core.
+All mmcv/mmdet dependencies are replaced with core.
 """
 import warnings
 import math

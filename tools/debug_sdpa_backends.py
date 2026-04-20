@@ -5,8 +5,8 @@ Expects the same `.npz` layout as `test.py` under ``torch_functional_test/``.
 
 Usage (from repo root)::
 
-    python simple_vla/tools/debug_sdpa_backends.py
-    TORCH_FUNCTIONAL_TEST_DIR=mydir python simple_vla/tools/debug_sdpa_backends.py
+    python tools/debug_sdpa_backends.py
+    TORCH_FUNCTIONAL_TEST_DIR=mydir python tools/debug_sdpa_backends.py
 """
 from __future__ import annotations
 

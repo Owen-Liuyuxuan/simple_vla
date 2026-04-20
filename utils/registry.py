@@ -1,4 +1,4 @@
-"""Compatibility re-export — use :mod:`simple_vla.core.registry` as the single source of truth."""
+"""Compatibility re-export — use :mod:`core.registry` as the single source of truth."""
 
 from core.registry import (  # noqa: F401
     Registry,

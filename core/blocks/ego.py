@@ -1,4 +1,4 @@
-"""models/ego/blocks.py → simple_vla/core/blocks/ego.py
+"""models/ego/blocks.py → core/blocks/ego.py
 
 Re-exported at module level for backward import compatibility.
 The actual implementation is inline here to avoid circular imports.
