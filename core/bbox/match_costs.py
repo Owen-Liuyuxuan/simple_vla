@@ -1,5 +1,5 @@
 # Copyright (c) OpenMMLab. All rights reserved.
-from simple_vla.core.registry import Registry, build_from_cfg
+from core.registry import Registry, build_from_cfg
 
 MATCH_COST = Registry('Match Cost')
 

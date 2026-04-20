@@ -84,7 +84,7 @@ def main() -> None:
 
     print(
         "\nTip: if `mem_eff_only` / `mem_math` show nan=True but `math_only` is clean, "
-        "use `maybe_configure_cuda_sdp()` from simple_vla.utils.torch_runtime "
+        "use `maybe_configure_cuda_sdp()` from utils.torch_runtime "
         "or export TORCH_DISABLE_MEM_EFFICIENT_SDPA=1."
     )
 

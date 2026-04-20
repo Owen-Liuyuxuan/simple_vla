@@ -3,12 +3,12 @@ import numpy as np
 import torch.nn.functional as F
 from scipy.optimize import linear_sum_assignment
 
-from simple_vla.core.registry import BBOX_SAMPLERS, BBOX_ASSIGNERS
-from simple_vla.core.samplers.match_cost import build_match_cost
-from simple_vla.core.registry import build_assigner
-from simple_vla.core.bbox.assigners import BaseAssigner
+from core.registry import BBOX_SAMPLERS, BBOX_ASSIGNERS
+from core.samplers.match_cost import build_match_cost
+from core.registry import build_assigner
+from core.bbox.assigners import BaseAssigner
 
-from simple_vla.core.samplers.base import BaseTargetWithDenoising
+from core.samplers.base import BaseTargetWithDenoising
 
 
 @BBOX_SAMPLERS.register_module()

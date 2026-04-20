@@ -6,10 +6,10 @@ import torch.nn as nn
 from torch.nn.functional import linear
 from torch.nn.init import xavier_uniform_, constant_
 
-from simple_vla.core.decorators import deprecated_api_warning
-from simple_vla.core.fp16_helper import auto_fp16
-from simple_vla.core.registry import ATTENTION
-from simple_vla.core.dropout import build_dropout
+from core.decorators import deprecated_api_warning
+from core.fp16_helper import auto_fp16
+from core.registry import ATTENTION
+from core.dropout import build_dropout
 
 from einops import rearrange
 try:

@@ -8,7 +8,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from simple_vla.core.registry import LOSSES
+from core.registry import LOSSES
 
 
 def _detached_integral(v: torch.Tensor, W: int) -> torch.Tensor:

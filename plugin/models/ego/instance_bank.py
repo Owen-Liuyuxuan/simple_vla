@@ -3,11 +3,11 @@ import numpy as np
 import torch.nn.functional as F
 
 from torch import nn
-from simple_vla.core.nn import Linear
-from simple_vla.core.registry import build_from_cfg
-from simple_vla.core.registry import PLUGIN_LAYERS
-from simple_vla.ops import feature_maps_format
-from simple_vla.core.blocks import linear_relu_ln
+from core.nn import Linear
+from core.registry import build_from_cfg
+from core.registry import PLUGIN_LAYERS
+from ops import feature_maps_format
+from core.blocks import linear_relu_ln
 
 
 __all__ = ["EgoInstanceBank"]

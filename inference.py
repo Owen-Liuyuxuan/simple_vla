@@ -2,10 +2,10 @@
 """Minimal inference using simple_vla registries (no mmcv / mmdet).
 
 Usage:
-    python simple_vla/inference.py
+    python inference.py
 
 Environment variables:
-    CONFIG      Path to config file  (default: simple_vla/configs/simple_inference_stage2_2b.py)
+    CONFIG      Path to config file  (default: configs/simple_inference_stage2_2b.py)
     CHECKPOINT  Path to checkpoint    (default: ../UniDriveVLA_Stage3_Nuscenes_2B.pt)
     OCCWORLD_VAE_PATH  Path to occworld VAE weights
     VLM_PRETRAINED_PATH HuggingFace path or local path to VLM weights
@@ -15,8 +15,8 @@ Environment variables:
 
 The script:
   1. Registers plugin classes (bootstrap) and builds UniDriveVLA via ``build_model``.
-  2. Loads config via ``simple_vla.utils.config_parser``.
-  3. Loads checkpoint via ``simple_vla.utils.checkpoint_loader``.
+  2. Loads config via ``utils.config_parser``.
+  3. Loads checkpoint via ``utils.checkpoint_loader``.
   4. Runs synthetic driving data through ``forward_test``.
   5. Prints trajectory shapes.
 """
@@ -29,11 +29,7 @@ from pathlib import Path
 import torch
 
 
-_REPO_ROOT = str(Path(__file__).resolve().parent.parent)
-if _REPO_ROOT not in sys.path:
-    sys.path.insert(0, _REPO_ROOT)
-
-from simple_vla.utils.torch_runtime import maybe_configure_cuda_sdp
+from utils.torch_runtime import maybe_configure_cuda_sdp
 
 maybe_configure_cuda_sdp()
 
@@ -57,12 +53,12 @@ print()
 
 # 2. Model builder (bootstrap registers all plugin classes)
 print("[1/5] Loading model_init...")
-from simple_vla.wrappers.model_init import build_model, load_model
+from wrappers.model_init import build_model, load_model
 print("      Done.")
 
 # 3. Load config
 print("[2/5] Loading config...")
-from simple_vla.utils.config_parser import load_config
+from utils.config_parser import load_config
 cfg = load_config(CONFIG)
 print(f"      Config loaded: model type = {cfg.get('model', {}).get('type', 'N/A')}")
 
@@ -85,7 +81,7 @@ model = build_model(model_cfg)
 
 if os.path.exists(CKPT):
     print(f"[4/5] Loading checkpoint: {CKPT}")
-    from simple_vla.utils.checkpoint_loader import load_checkpoint
+    from utils.checkpoint_loader import load_checkpoint
     ckpt = load_checkpoint(model, CKPT, map_location="cpu", strict=False)
     if isinstance(ckpt, dict) and 'meta' in ckpt:
         if 'CLASSES' in ckpt['meta']:
@@ -104,8 +100,8 @@ model = model.to(DEVICE).eval()
 # temporal InstanceBank state is exercised per forward; multi-batch smoke tests need
 # collated img_metas / poses — see SyntheticDrivingDataset when batch_size > 1).
 print("[5/5] Running inference on synthetic data...")
-from simple_vla.datasets.synthetic_dataset import SyntheticDrivingDataset
-from simple_vla.tools.simple_vis import run_visualization
+from datasets.synthetic_dataset import SyntheticDrivingDataset
+from tools.simple_vis import run_visualization
 
 num_samples = int(os.environ.get("NUM_SAMPLES", "4"))
 img_height = int(os.environ.get("IMG_HEIGHT", "544"))
@@ -114,7 +110,7 @@ img_width = int(os.environ.get("IMG_WIDTH", "960"))
 _batch_env = os.environ.get("BATCH_SIZE", "1").strip()
 if _batch_env not in ("", "1"):
     print(
-        f"  Note: BATCH_SIZE={_batch_env} ignored; simple_vla/inference.py always uses batch_size=1."
+        f"  Note: BATCH_SIZE={_batch_env} ignored; inference.py always uses batch_size=1."
     )
 
 dataset = SyntheticDrivingDataset(

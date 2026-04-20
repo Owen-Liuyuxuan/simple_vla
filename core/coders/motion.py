@@ -5,9 +5,9 @@ Motion planning refinement module.
 import torch
 import torch.nn as nn
 
-from simple_vla.core.nn import Linear, BaseModule, bias_init_with_prob
-from simple_vla.core.registry import PLUGIN_LAYERS
-from simple_vla.core.blocks import linear_relu_ln
+from core.nn import Linear, BaseModule, bias_init_with_prob
+from core.registry import PLUGIN_LAYERS
+from core.blocks import linear_relu_ln
 
 
 @PLUGIN_LAYERS.register_module()

@@ -7,9 +7,9 @@ import numpy as np
 import torch.nn.functional as F
 from scipy.optimize import linear_sum_assignment
 
-from simple_vla.core.registry import BBOX_SAMPLERS
-from simple_vla.core.box3d import X, Y, Z, W, L, H, SIN_YAW, COS_YAW, YAW
-from simple_vla.core.samplers.base import BaseTargetWithDenoising
+from core.registry import BBOX_SAMPLERS
+from core.box3d import X, Y, Z, W, L, H, SIN_YAW, COS_YAW, YAW
+from core.samplers.base import BaseTargetWithDenoising
 
 
 __all__ = ["SparseBox3DTarget"]

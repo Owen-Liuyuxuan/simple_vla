@@ -13,7 +13,7 @@ from typing import Any, Dict, Optional, Tuple
 import torch
 from torch import nn
 
-from simple_vla.plugin.unidrivevla.wrappers.packed_temporal_memory import (
+from plugin.unidrivevla.wrappers.packed_temporal_memory import (
     PackedTemporalMemory,
 )
 

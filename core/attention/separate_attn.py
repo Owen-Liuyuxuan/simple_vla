@@ -1,7 +1,7 @@
 """separate_attn.py — modality-separate and temporal attention.
 
 Copy+rewrite of `nuScenes/projects/mmdet3d_plugin/models/separate_attn.py`.
-Replaces mmcv imports with simple_vla.core.
+Replaces mmcv imports with core.
 """
 import warnings
 import math
@@ -11,20 +11,20 @@ import torch.nn as nn
 from torch.nn.functional import linear
 from torch.nn.init import xavier_uniform_, constant_
 
-from simple_vla.core.decorators import deprecated_api_warning
-from simple_vla.core.fp16_helper import auto_fp16
-from simple_vla.core.nn import BaseModule
-from simple_vla.core.dropout import build_dropout
-from simple_vla.core.registry import ATTENTION, NORM_LAYERS, PLUGIN_LAYERS, FEEDFORWARD_NETWORK
-from simple_vla.core.activation import build_activation_layer
-from simple_vla.core.norm import build_norm_layer
-from simple_vla.core.nn import xavier_init
-from simple_vla.core.transformer import FFN
+from core.decorators import deprecated_api_warning
+from core.fp16_helper import auto_fp16
+from core.nn import BaseModule
+from core.dropout import build_dropout
+from core.registry import ATTENTION, NORM_LAYERS, PLUGIN_LAYERS, FEEDFORWARD_NETWORK
+from core.activation import build_activation_layer
+from core.norm import build_norm_layer
+from core.nn import xavier_init
+from core.transformer import FFN
 
 import torch.utils.checkpoint as cp
 
-from simple_vla.core.blocks import linear_relu_ln
-from simple_vla.core.registry import build_from_cfg
+from core.blocks import linear_relu_ln
+from core.registry import build_from_cfg
 
 
 @ATTENTION.register_module()

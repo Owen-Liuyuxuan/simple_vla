@@ -2,12 +2,12 @@ import torch
 import torch.nn as nn
 import numpy as np
 
-from simple_vla.core.nn import Linear, Scale, bias_init_with_prob
-from simple_vla.core.nn import Sequential, BaseModule
-from simple_vla.core.nn import xavier_init
-from simple_vla.core.registry import PLUGIN_LAYERS
+from core.nn import Linear, Scale, bias_init_with_prob
+from core.nn import Sequential, BaseModule
+from core.nn import xavier_init
+from core.registry import PLUGIN_LAYERS
 
-from simple_vla.core.box3d import *
+from core.box3d import *
 from ..blocks import linear_relu_ln
 
 

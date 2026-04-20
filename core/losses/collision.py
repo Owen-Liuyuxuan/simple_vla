@@ -6,7 +6,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from simple_vla.core.registry import LOSSES
+from core.registry import LOSSES
 
 
 @LOSSES.register_module()

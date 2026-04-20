@@ -1,8 +1,8 @@
 import torch
 
-from simple_vla.core.bbox.coder import BaseBBoxCoder
-from simple_vla.core.bbox import BBOX_CODERS
-from simple_vla.plugin.core.bbox.util import normalize_bbox, denormalize_bbox
+from core.bbox.coder import BaseBBoxCoder
+from core.bbox import BBOX_CODERS
+from plugin.core.bbox.util import normalize_bbox, denormalize_bbox
 
 @BBOX_CODERS.register_module()
 class DETRTrack3DCoder(BaseBBoxCoder):

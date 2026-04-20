@@ -286,7 +286,7 @@ def stateless_forward_functional_memory(
         ``results``, ``packed_memory_out`` (from ``model._last_temporal_memory_out``), and
         ``det_tracking_out`` (from ``model._last_det_tracking_out``).
     """
-    from simple_vla.plugin.unidrivevla.wrappers.packed_temporal_memory import (
+    from plugin.unidrivevla.wrappers.packed_temporal_memory import (
         cold_det_tracking_state,
         cold_packed_memory_like_unpack_none,
     )

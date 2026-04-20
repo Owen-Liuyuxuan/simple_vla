@@ -17,24 +17,24 @@ from typing import Any, Dict, Optional, Tuple
 import numpy as np
 import torch
 import torch.nn as nn
-from simple_vla.core.nn import Linear
-from simple_vla.core.registry import (
+from core.nn import Linear
+from core.registry import (
     ATTENTION,
     PLUGIN_LAYERS,
     POSITIONAL_ENCODING,
     FEEDFORWARD_NETWORK,
     NORM_LAYERS,
 )
-from simple_vla.core.registry import build_from_cfg
-from simple_vla.core.nn import BaseModule
-from simple_vla.core import reduce_mean
-from simple_vla.core.registry import BBOX_CODERS
-from simple_vla.core.registry import HEADS, LOSSES
+from core.registry import build_from_cfg
+from core.nn import BaseModule
+from core import reduce_mean
+from core.registry import BBOX_CODERS
+from core.registry import HEADS, LOSSES
 
-from simple_vla.plugin.models.blocks import linear_relu_ln
-from simple_vla.plugin.models.attention import gen_sineembed_for_position
-from simple_vla.core.box3d import *
-from simple_vla.plugin.unidrivevla.wrappers.packed_temporal_memory import (
+from plugin.models.blocks import linear_relu_ln
+from plugin.models.attention import gen_sineembed_for_position
+from core.box3d import *
+from plugin.unidrivevla.wrappers.packed_temporal_memory import (
     PackedTemporalMemory,
 )
 

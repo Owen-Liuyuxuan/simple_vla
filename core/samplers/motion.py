@@ -4,7 +4,7 @@ Motion/Planning target samplers.
 """
 import torch
 
-from simple_vla.core.registry import BBOX_SAMPLERS
+from core.registry import BBOX_SAMPLERS
 
 def get_cls_target(reg_preds, reg_target, reg_weight):
     bs, num_pred, mode, ts, d = reg_preds.shape

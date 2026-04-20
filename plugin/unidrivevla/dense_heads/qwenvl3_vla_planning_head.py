@@ -21,13 +21,13 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 import logging
-from simple_vla.core.registry import HEADS
-from simple_vla.core.registry import build_head
+from core.registry import HEADS
+from core.registry import build_head
 from timm.models.layers import Mlp
 from einops import rearrange
 from .unidrivevla_vlm_qwenvl3 import Qwen3VLWithExpertModel
 from torch.nn.utils.rnn import pad_sequence
-from simple_vla.plugin.unidrivevla.dense_heads.flex_attention_opt import build_blockmask_unidrive
+from plugin.unidrivevla.dense_heads.flex_attention_opt import build_blockmask_unidrive
 from .constants import (
     NUSCENES_SYSTEM_PROMPT,
     NUSCENES_USER_PROMPT_TEMPLATE,
@@ -45,10 +45,10 @@ from .utils import (
 )
 from .modules import OccLatentDecoder, DenseDepthNet
 
-from simple_vla.core.box3d import *
-from simple_vla.ops import feature_maps_format
+from core.box3d import *
+from ops import feature_maps_format
 from .unified_perception_decoder import UnifiedPerceptionDecoder
-from simple_vla.plugin.unidrivevla.wrappers.packed_temporal_memory import (
+from plugin.unidrivevla.wrappers.packed_temporal_memory import (
     PackedTemporalMemory,
     cold_det_tracking_state,
     cold_packed_memory_like_unpack_none,

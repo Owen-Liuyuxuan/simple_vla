@@ -38,8 +38,8 @@ from typing import Any, Dict, List, Optional, Tuple
 import torch
 import torch.nn.functional as F
 
-from simple_vla.plugin.models.instance_bank import topk as bank_topk
-from simple_vla.plugin.unidrivevla.wrappers.packed_temporal_memory import (
+from plugin.models.instance_bank import topk as bank_topk
+from plugin.unidrivevla.wrappers.packed_temporal_memory import (
     PackedDetTrackingState,
 )
 

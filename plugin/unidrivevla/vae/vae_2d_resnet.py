@@ -5,8 +5,8 @@
 import torch
 import torch.nn as nn
 import numpy as np
-from simple_vla.core.registry import HEADS, build_head
-from simple_vla.core.nn import BaseModule
+from core.registry import HEADS, build_head
+from core.nn import BaseModule
 import torch.nn.functional as F
 from copy import deepcopy
 from typing import List, Tuple

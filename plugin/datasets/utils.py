@@ -3,7 +3,7 @@
 import numpy as np
 import torch
 
-from simple_vla.core.box3d import H, L, W, YAW
+from core.box3d import H, L, W, YAW
 
 
 def box3d_to_corners(box3d):

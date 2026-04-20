@@ -6,7 +6,7 @@ import torch
 import torch.nn.functional as F
 from torch.nn.functional import smooth_l1_loss
 
-from simple_vla.core.registry import Registry
+from core.registry import Registry
 
 MATCH_COST = Registry("match_cost")
 

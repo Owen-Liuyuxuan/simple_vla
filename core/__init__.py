@@ -1,8 +1,8 @@
-"""simple_vla.core — zero-dependency foundation for the UniDriveVLA inference stack.
+"""core — zero-dependency foundation for the UniDriveVLA inference stack.
 
 All symbols are re-exported here so downstream modules can use::
 
-    from simple_vla.core import (
+    from core import (
         Registry, build_from_cfg, build,
         ATTENTION, PLUGIN_LAYERS, POSITIONAL_ENCODING,
         FEEDFORWARD_NETWORK, NORM_LAYERS, HEADS, LOSSES,

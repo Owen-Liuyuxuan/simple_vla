@@ -1,5 +1,5 @@
 # Copyright (c) OpenMMLab. All rights reserved.
-from simple_vla.core.registry import (
+from core.registry import (
     BBOX_SAMPLERS,
     BBOX_CODERS,
     BBOX_ASSIGNERS,

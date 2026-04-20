@@ -6,8 +6,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 from einops import rearrange
-from simple_vla.core.registry import HEADS
-from simple_vla.core.nn import BaseModule
+from core.registry import HEADS
+from core.nn import BaseModule
 
 @HEADS.register_module()
 class VectorQuantizer(BaseModule):

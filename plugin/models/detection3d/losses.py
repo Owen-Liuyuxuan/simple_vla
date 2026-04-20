@@ -1,9 +1,9 @@
 import torch
 import torch.nn as nn
 
-from simple_vla.core.registry import LOSSES, build
+from core.registry import LOSSES, build
 
-from simple_vla.core.box3d import *
+from core.box3d import *
 
 
 @LOSSES.register_module()

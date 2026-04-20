@@ -3,17 +3,17 @@ from inspect import signature
 import torch
 import torch.nn as nn
 
-from simple_vla.core.decorators import deprecated_api_warning
-from simple_vla.core.fp16_helper import auto_fp16, force_fp32
-from simple_vla.core.registry import build_from_cfg
-from simple_vla.core.registry import PLUGIN_LAYERS
-from simple_vla.core.registry import HEADS
-from simple_vla.core.registry import build_backbone
-from simple_vla.core.registry import build_head
-from simple_vla.core.registry import build_neck
+from core.decorators import deprecated_api_warning
+from core.fp16_helper import auto_fp16, force_fp32
+from core.registry import build_from_cfg
+from core.registry import PLUGIN_LAYERS
+from core.registry import HEADS
+from core.registry import build_backbone
+from core.registry import build_head
+from core.registry import build_neck
 from .grid_mask import GridMask
 
-from simple_vla.ops import feature_maps_format
+from ops import feature_maps_format
 __all__ = ["SparseDrive"]
 
 

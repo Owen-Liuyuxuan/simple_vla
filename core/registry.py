@@ -153,7 +153,7 @@ def build_assigner(cfg: Optional[Dict], default_args: Optional[Dict] = None) -> 
     return build_from_cfg(cfg, BBOX_ASSIGNERS, default_args)
 
 
-# Convenience: re-export for ``from simple_vla.core import build_from_cfg``
+# Convenience: re-export for ``from core import build_from_cfg``
 __all__ = [
     'Registry', 'build_from_cfg', 'build',
     'ATTENTION', 'PLUGIN_LAYERS', 'POSITIONAL_ENCODING',

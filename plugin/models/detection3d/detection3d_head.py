@@ -5,20 +5,20 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from simple_vla.core.registry import (
+from core.registry import (
     ATTENTION,
     PLUGIN_LAYERS,
     POSITIONAL_ENCODING,
     FEEDFORWARD_NETWORK,
     NORM_LAYERS,
 )
-from simple_vla.core.nn import BaseModule
-from simple_vla.core.fp16_helper import force_fp32
-from simple_vla.core.registry import build_from_cfg
-from simple_vla.core.registry import BBOX_SAMPLERS
-from simple_vla.core.registry import BBOX_CODERS
-from simple_vla.core.registry import HEADS, LOSSES
-from simple_vla.core.distributed import reduce_mean
+from core.nn import BaseModule
+from core.fp16_helper import force_fp32
+from core.registry import build_from_cfg
+from core.registry import BBOX_SAMPLERS
+from core.registry import BBOX_CODERS
+from core.registry import HEADS, LOSSES
+from core.distributed import reduce_mean
 
 from ..blocks import DeformableFeatureAggregation as DFG
 

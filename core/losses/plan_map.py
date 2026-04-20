@@ -7,7 +7,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from simple_vla.core.registry import LOSSES
+from core.registry import LOSSES
 
 
 def _segments_intersect(line1_start, line1_end, line2_start, line2_end):

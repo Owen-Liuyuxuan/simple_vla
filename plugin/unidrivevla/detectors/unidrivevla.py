@@ -1,8 +1,8 @@
 import torch
 import numpy as np
-from simple_vla.core.registry import DETECTORS
-from simple_vla.core.registry import build_head
-from simple_vla.core.detectors.base import BaseDetector
+from core.registry import DETECTORS
+from core.registry import build_head
+from core.detectors.base import BaseDetector
 
 
 # VAERes3D + OccLatentDecoder yield per-sample logits shaped (C, Z, H, W); C=num_classes, Z=height bins.

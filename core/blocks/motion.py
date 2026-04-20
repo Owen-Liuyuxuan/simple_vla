@@ -5,11 +5,11 @@ SparseMotionRefinementModule used by the motion prediction head.
 import torch
 import torch.nn as nn
 
-from simple_vla.core.nn import Linear, BaseModule
-from simple_vla.core.nn import bias_init_with_prob
+from core.nn import Linear, BaseModule
+from core.nn import bias_init_with_prob
 
-from simple_vla.core.blocks import linear_relu_ln
-from simple_vla.core.registry import PLUGIN_LAYERS
+from core.blocks import linear_relu_ln
+from core.registry import PLUGIN_LAYERS
 
 
 @PLUGIN_LAYERS.register_module()

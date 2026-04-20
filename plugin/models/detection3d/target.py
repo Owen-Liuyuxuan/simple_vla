@@ -3,10 +3,10 @@ import numpy as np
 import torch.nn.functional as F
 from scipy.optimize import linear_sum_assignment
 
-from simple_vla.core.registry import BBOX_SAMPLERS
+from core.registry import BBOX_SAMPLERS
 
-from simple_vla.core.box3d import *
-from simple_vla.core.samplers.base import BaseTargetWithDenoising
+from core.box3d import *
+from core.samplers.base import BaseTargetWithDenoising
 
 
 __all__ = ["SparseBox3DTarget"]

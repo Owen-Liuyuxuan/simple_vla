@@ -1,6 +1,6 @@
 import torch
 from torch import nn
-from simple_vla.core.registry import build_head
+from core.registry import build_head
 from einops import rearrange
 from torch.cuda.amp import autocast
 

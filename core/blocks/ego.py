@@ -6,13 +6,13 @@ The actual implementation is inline here to avoid circular imports.
 import torch
 import torch.nn as nn
 
-from simple_vla.core.nn import Linear, BaseModule
-from simple_vla.core.activation import build_activation_layer
-from simple_vla.core.norm import build_norm_layer
-from simple_vla.core.registry import PLUGIN_LAYERS
-from simple_vla.core.nn import bias_init_with_prob, xavier_init
+from core.nn import Linear, BaseModule
+from core.activation import build_activation_layer
+from core.norm import build_norm_layer
+from core.registry import PLUGIN_LAYERS
+from core.nn import bias_init_with_prob, xavier_init
 
-from simple_vla.core.blocks import linear_relu_ln
+from core.blocks import linear_relu_ln
 
 
 @PLUGIN_LAYERS.register_module()

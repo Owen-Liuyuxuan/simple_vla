@@ -2,9 +2,9 @@ from typing import Optional
 
 import torch
 
-from simple_vla.core.registry import BBOX_CODERS
+from core.registry import BBOX_CODERS
 
-from simple_vla.core.box3d import *
+from core.box3d import *
 
 def decode_box(box):
     yaw = torch.atan2(box[..., SIN_YAW], box[..., COS_YAW])

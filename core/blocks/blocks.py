@@ -2,7 +2,7 @@
 
 This file is a direct copy+import rewrite of
 `nuScenes/projects/mmdet3d_plugin/models/blocks.py`.
-All mmcv/mmdet dependencies are replaced with simple_vla.core equivalents.
+All mmcv/mmdet dependencies are replaced with core equivalents.
 """
 from typing import List, Optional, Tuple
 
@@ -11,15 +11,15 @@ import torch
 import torch.nn as nn
 from torch.cuda.amp.autocast_mode import autocast
 
-from simple_vla.core.nn import Linear, Sequential, BaseModule, xavier_init, constant_init
-from simple_vla.core.activation import build_activation_layer
-from simple_vla.core.norm import build_norm_layer
-from simple_vla.core.registry import build_from_cfg, FEEDFORWARD_NETWORK, PLUGIN_LAYERS, ATTENTION
-from simple_vla.core.transformer import FFN
-from simple_vla.core.dropout import build_dropout
-from simple_vla.core.decorators import deprecated_api_warning
-from simple_vla.core.fp16_helper import auto_fp16
-from simple_vla.ops import deformable_aggregation_function as DAF
+from core.nn import Linear, Sequential, BaseModule, xavier_init, constant_init
+from core.activation import build_activation_layer
+from core.norm import build_norm_layer
+from core.registry import build_from_cfg, FEEDFORWARD_NETWORK, PLUGIN_LAYERS, ATTENTION
+from core.transformer import FFN
+from core.dropout import build_dropout
+from core.decorators import deprecated_api_warning
+from core.fp16_helper import auto_fp16
+from ops import deformable_aggregation_function as DAF
 
 
 

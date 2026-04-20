@@ -3,8 +3,8 @@ from torch import nn
 import torch.nn.functional as F
 import numpy as np
 
-from simple_vla.core.registry import build_from_cfg
-from simple_vla.core.registry import PLUGIN_LAYERS
+from core.registry import build_from_cfg
+from core.registry import PLUGIN_LAYERS
 
 __all__ = ["InstanceBank"]
 

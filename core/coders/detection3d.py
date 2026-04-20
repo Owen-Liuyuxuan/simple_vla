@@ -8,13 +8,13 @@ Three encoder/coder classes:
 import torch
 import torch.nn as nn
 
-from simple_vla.core.nn import Linear, BaseModule, Scale, xavier_init, bias_init_with_prob
-from simple_vla.core.activation import build_activation_layer
-from simple_vla.core.norm import build_norm_layer
-from simple_vla.core.registry import POSITIONAL_ENCODING, PLUGIN_LAYERS
-from simple_vla.core.box3d import X, Y, Z, W, L, H, SIN_YAW, COS_YAW, VX
+from core.nn import Linear, BaseModule, Scale, xavier_init, bias_init_with_prob
+from core.activation import build_activation_layer
+from core.norm import build_norm_layer
+from core.registry import POSITIONAL_ENCODING, PLUGIN_LAYERS
+from core.box3d import X, Y, Z, W, L, H, SIN_YAW, COS_YAW, VX
 
-from simple_vla.core.blocks import linear_relu_ln
+from core.blocks import linear_relu_ln
 
 
 @POSITIONAL_ENCODING.register_module()

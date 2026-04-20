@@ -5,7 +5,7 @@ import cv2
 import matplotlib
 import matplotlib.pyplot as plt
 
-from simple_vla.plugin.datasets.utils import box3d_to_corners
+from plugin.datasets.utils import box3d_to_corners
  
 CMD_LIST = ['Turn Right', 'Turn Left', 'Go Straight']
 COLOR_VECTORS = ['cornflowerblue', 'royalblue', 'slategrey']

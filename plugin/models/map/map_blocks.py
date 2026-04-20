@@ -5,13 +5,13 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 
-from simple_vla.core.nn import Linear, Scale, bias_init_with_prob
-from simple_vla.core.nn import Sequential, BaseModule
-from simple_vla.core.nn import xavier_init
-from simple_vla.core.registry import PLUGIN_LAYERS
-from simple_vla.core.registry import POSITIONAL_ENCODING
+from core.nn import Linear, Scale, bias_init_with_prob
+from core.nn import Sequential, BaseModule
+from core.nn import xavier_init
+from core.registry import PLUGIN_LAYERS
+from core.registry import POSITIONAL_ENCODING
 
-from simple_vla.core.blocks import linear_relu_ln
+from core.blocks import linear_relu_ln
 
 
 @POSITIONAL_ENCODING.register_module()

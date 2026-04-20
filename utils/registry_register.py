@@ -1,7 +1,7 @@
 """Register all classes — delegates to :func:`simple_vla.plugin.bootstrap.ensure_plugins_registered`."""
 
-from simple_vla.plugin.bootstrap import ensure_plugins_registered
-from simple_vla.utils.registry import (
+from plugin.bootstrap import ensure_plugins_registered
+from utils.registry import (
     ATTENTION,
     PLUGIN_LAYERS,
     POSITIONAL_ENCODING,

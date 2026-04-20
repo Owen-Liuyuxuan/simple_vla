@@ -7,9 +7,9 @@ import torch
 import torch.nn.functional as F
 import numpy as np
 
-from simple_vla.core.registry import PLUGIN_LAYERS
+from core.registry import PLUGIN_LAYERS
 
-from simple_vla.ops import feature_maps_format
+from ops import feature_maps_format
 
 
 @PLUGIN_LAYERS.register_module()

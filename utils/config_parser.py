@@ -34,7 +34,7 @@ def load_config(config_path: str) -> dict:
     namespace['_get_env'] = _get_env
 
     # Inject pre-registered registries so config can reference them by name
-    from simple_vla.utils.registry import (
+    from utils.registry import (
         ATTENTION, PLUGIN_LAYERS, POSITIONAL_ENCODING,
         FEEDFORWARD_NETWORK, NORM_LAYERS, HEADS, LOSSES,
         BBOX_SAMPLERS, BBOX_CODERS,

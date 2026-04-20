@@ -5,8 +5,8 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from simple_vla.core.registry import HEADS
-from simple_vla.core.registry import build_head
+from core.registry import HEADS
+from core.registry import build_head
 
 
 @HEADS.register_module()

@@ -155,7 +155,7 @@ def empty_packed_memory(
 
 def metas_snapshot_tensors_from_metas(metas: Dict[str, Any], ref: torch.Tensor) -> Dict[str, torch.Tensor]:
     """Extract batched ``timestamp`` (float64) and ego poses (same stacking as functional banks)."""
-    from simple_vla.plugin.models.functional_instance_bank import (
+    from plugin.models.functional_instance_bank import (
         img_metas_list_to_pose_tensors,
     )
 

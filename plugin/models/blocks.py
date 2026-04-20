@@ -5,19 +5,19 @@ import torch
 import torch.nn as nn
 from torch.cuda.amp.autocast_mode import autocast
 
-from simple_vla.core.nn import Linear, Sequential, BaseModule
-from simple_vla.core.activation import build_activation_layer
-from simple_vla.core.norm import build_norm_layer
-from simple_vla.core.registry import build_from_cfg
-from simple_vla.core.dropout import build_dropout
-from simple_vla.core.nn import xavier_init, constant_init
-from simple_vla.core.registry import (
+from core.nn import Linear, Sequential, BaseModule
+from core.activation import build_activation_layer
+from core.norm import build_norm_layer
+from core.registry import build_from_cfg
+from core.dropout import build_dropout
+from core.nn import xavier_init, constant_init
+from core.registry import (
     ATTENTION,
     PLUGIN_LAYERS,
     FEEDFORWARD_NETWORK,
 )
 
-from simple_vla.ops import deformable_aggregation_function as DAF
+from ops import deformable_aggregation_function as DAF
 
 __all__ = [
     "DeformableFeatureAggregation",

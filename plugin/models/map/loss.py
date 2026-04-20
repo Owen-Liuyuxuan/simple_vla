@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 
-from simple_vla.core.registry import build_from_cfg, build, LOSSES
-from simple_vla.core.losses import l1_loss, smooth_l1_loss
+from core.registry import build_from_cfg, build, LOSSES
+from core.losses import l1_loss, smooth_l1_loss
 
 
 @LOSSES.register_module()

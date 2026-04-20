@@ -52,7 +52,7 @@ def run_visualization(
     out_dir,
     plot_choices,
 ):
-    from simple_vla.tools.visualization.bev_render import BEVRender
+    from tools.visualization.bev_render import BEVRender
 
     combine_dir = osp.join(out_dir, "combine")
     os.makedirs(combine_dir, exist_ok=True)

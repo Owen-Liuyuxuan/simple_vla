@@ -1,6 +1,6 @@
 import torch
 
-from simple_vla.core.registry import BBOX_SAMPLERS
+from core.registry import BBOX_SAMPLERS
 
 __all__ = ["MotionTarget", "SparseMotionTarget", "PlanningTarget"]
 

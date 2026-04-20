@@ -2,7 +2,7 @@ from typing import Optional, List
 
 import torch
 
-from simple_vla.core.registry import BBOX_CODERS
+from core.registry import BBOX_CODERS
 
 
 @BBOX_CODERS.register_module()

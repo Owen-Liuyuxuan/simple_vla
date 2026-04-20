@@ -4,10 +4,10 @@ from torch import nn
 import torch.nn.functional as F
 import numpy as np
 
-from simple_vla.core.registry import build_from_cfg, PLUGIN_LAYERS
+from core.registry import build_from_cfg, PLUGIN_LAYERS
 
-from simple_vla.ops import feature_maps_format
-from simple_vla.core.box3d import *
+from ops import feature_maps_format
+from core.box3d import *
 
 
 @PLUGIN_LAYERS.register_module()

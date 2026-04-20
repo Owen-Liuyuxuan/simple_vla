@@ -5,10 +5,10 @@ EgoInstanceBank — ego-centric feature extraction + temporal memory.
 import torch
 import numpy as np
 
-from simple_vla.core.registry import PLUGIN_LAYERS
-from simple_vla.core.blocks import linear_relu_ln
+from core.registry import PLUGIN_LAYERS
+from core.blocks import linear_relu_ln
 
-from simple_vla.ops import feature_maps_format
+from ops import feature_maps_format
 
 
 def topk(confidence, k, *inputs):
@@ -44,7 +44,7 @@ class EgoInstanceBank(torch.nn.Module):
         self.with_instance_feat = with_instance_feat
 
         if anchor_handler is not None:
-            from simple_vla.core.registry import build_from_cfg
+            from core.registry import build_from_cfg
             anchor_handler = build_from_cfg(anchor_handler, PLUGIN_LAYERS)
             assert hasattr(anchor_handler, "anchor_projection")
         self.anchor_handler = anchor_handler

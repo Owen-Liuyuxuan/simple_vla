@@ -3,12 +3,12 @@ from typing import Optional
 import numpy as np
 import torch
 
-from simple_vla.core.registry import BBOX_CODERS
+from core.registry import BBOX_CODERS
 
 
-from simple_vla.core.box3d import *
-from simple_vla.plugin.models.detection3d.decoder import *
-from simple_vla.plugin.datasets.utils import box3d_to_corners
+from core.box3d import *
+from plugin.models.detection3d.decoder import *
+from plugin.datasets.utils import box3d_to_corners
 
 
 @BBOX_CODERS.register_module()

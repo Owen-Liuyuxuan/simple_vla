@@ -6,7 +6,7 @@ import torch
 import numpy as np
 import torch.nn.functional as F
 
-from simple_vla.core.registry import PLUGIN_LAYERS
+from core.registry import PLUGIN_LAYERS
 
 
 def topk(confidence, k, *inputs):
@@ -46,7 +46,7 @@ class InstanceBank(torch.nn.Module):
 
         if anchor_handler is not None:
             # Lazy import to avoid circular dependency
-            from simple_vla.core.registry import build_from_cfg
+            from core.registry import build_from_cfg
             anchor_handler = build_from_cfg(anchor_handler, PLUGIN_LAYERS)
             assert hasattr(anchor_handler, "anchor_projection")
         self.anchor_handler = anchor_handler
