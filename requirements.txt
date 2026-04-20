@@ -14,7 +14,6 @@ pillow
 safetensors
 scipy
 timm
-torch
 tqdm
 setuptools
 
